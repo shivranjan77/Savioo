@@ -1,0 +1,77 @@
+.logo{
+  color:rgb(240,243,189);
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.navbar{
+  background-color: rgb(5,102,141);
+}
+
+.ulNavbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:rgb(5,102,141);
+  display: flex;
+  color:rgb(240,243,189,0.5) !important;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ulNavbar li {
+  margin: 0px 20px ;
+  cursor: pointer;
+}
+.ulNavbar li:hover{
+    color: rgb(240,243,189);
+}
+
+.ulNavbar .link{
+  color:rgb(240,243,189,0.5)  ;
+  text-decoration: none;
+}
+body{
+    margin: 0px;
+}
+.jumbotron{
+    margin-bottom: 0px !important;
+}
+
+.modal-header{
+     text-align: right;
+     position: relative;
+     border-bottom: 1.5px solid black !important;
+ }
+ .modal-title{
+    margin-left: 25%;
+ }
+ .modal-label{
+     margin: 1px 0px 5px 0px;
+ }
+ .modal-body{
+     margin-top: 10px;
+     
+ }
+ .form-control{
+     background-color: rgb(231, 229, 224) !important;
+     
+ }
+ .modal-btn{
+     margin-top: 10px;
+     width: 100%;
+     background-color:rgb(5,102,141) !important;
+ }
+ .modal{
+    font-family: 'Ubuntu Condensed' ;
+ }
+.modal-footer{
+    justify-content: center !important;
+}
+
+
+.footer {
+    background-color:rgb(5,102,141);
+    margin: 0px auto;
+    padding: 20px 0px;
+    color: white;
+  }

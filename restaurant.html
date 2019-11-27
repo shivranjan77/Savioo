@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="restaruant.css">
+    <link rel="stylesheet" href="common.css">
+    <link href='font/font.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="jquery-ui-1.12.1\jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1\jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1\jquery-ui.theme.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Restaurant</title>
+</head>
+
+<body>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+    <div class="main">
+        <nav class="navbar fixed-top ">
+            <a href="main.html"><span class="logo">SAVIoO</span></a>
+            <ul class="ulNavbar">
+                <a href="hotel.html" class="link">
+                    <li>Hotel</li>
+                </a>
+                <a href="restaurant.html" class="link">
+                    <li>Restaurant</li>
+                </a>
+                <a href="aboutus.html" class="link">
+                    <li>About Us</li>
+                </a>
+                <a href="contact.html" class="link">
+                    <li>Contact</li>
+                </a>
+                <a href="index.html" class="link"><li>Log Out</li></a>
+            </ul>
+        </nav>
+        <header class="jumbotron">
+            <div class="container">
+                <div class="row row-header">
+                    <div class="col-12 col-sm-6">
+                        <h1>SAVIoO Food</h1>
+                        <p>We take inspiration from the World's best cuisines, and create a unique fusion experience.
+                            Our lipsmacking creations will tickle your culinary senses!</p>
+                    </div>
+                    <div class="col-12 col-sm-3 align-self-center">
+
+                    </div>
+                    <div class="col-12 col-sm align-self-center">
+                        <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
+                            data-target="#reserveform">Reserve Table</a>
+
+                    </div>
+                </div>
+            </div>
+            <div id="reserveform" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="content">
+
+                    <div class="modal-content text-dark">
+                        <div class="modal-header text-dark">
+                            <h4 class="modal-title text-body">Reserve a Table </h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+                        </div>
+                        <div class="modal-body">
+                                <form autocomplete="off">
+                                        <div class="form-row">
+                                            <div class="col-sm-2">
+                                                <label for="NumberofGuests">Number of Guests</label>
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <label>
+                                                    <input type="radio" name="approve1" id="approve1"> 1 &nbsp &nbsp</label>
+                                                <label>
+                                                    <input type="radio" name="approve1" id="approve1" checked> 2 &nbsp
+                                                    &nbsp</label>
+                                                <label>
+                                                    <input type="radio" name="approve1" id="approve1"> 3 &nbsp &nbsp</label>
+                                                <label>
+                                                    <input type="radio" name="approve1" id="approve1"> 4 &nbsp &nbsp</label>
+                                                <label>
+                                                    <input type="radio" name="approve1" id="approve1"> 5 &nbsp &nbsp</label>
+                                                <label>
+                                                    <input type="radio" name="approve1" id="approve1"> 6 </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-2">
+                                                <label class="Section">Section</label>
+                                            </div>
+                                            <div class="btn-group1 col-sm-4">
+        
+                                                <input type="radio" name="son" id="son" checked>
+                                                <button type="button" class="btn btn-success"><label for="son">Non-Smoking</label> </button> 
+                                                <input type="radio" name="son" id="son2">
+                                                <button type="button" class="btn btn-danger"><label for="son2">Smoking</label></button>
+        
+                                               
+        
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-4"></div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-1">
+                                                <label class="Date">Date and Time</label></div>
+                                            <div class="col-sm-1"></div>
+                                            <div class="mt-4 col-sm-4">
+                                                <input type="text" class="form-control form-control-sm mr-1" placeholder="Date"
+                                                    id="date">
+                                            </div>
+                                            <div class="mt-4 col-sm-4">
+        
+                                                <input type="time" class="form-control form-control-sm mr-1" placeholder="Time"
+                                                    id="time" step="900">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-sm-2">
+        
+                                            </div>
+                                            <div class="mt-3 col-sm-8">
+                                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                                    data-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-primary btn-sm ml-1"
+                                                    id="reserve">Reserve</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div><br><br></div>
+        <div class="container">
+            <div class="row row-content">
+                <div class="col">
+                    <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img class="d-block img-fluid" src="images/pizz.jpg" alt="Uthappizza">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>Uthappizza
+                                        <span class="badge badge-danger">HOT</span>
+                                        <span class="badge badge-pill badge-secondary">₹499</span></h2>
+                                    <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                        Italian pizza, topped with Cerignola olives, ripe vine
+                                        cherry tomatoes, Vidalia onion, Guntur chillies and
+                                        Buffalo Paneer.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="images/thali.jpg" alt="buffet">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>Weekend Grand Buffet
+                                        <span class="badge badge-danger">NEW</span>
+                                    </h2>
+                                    <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of
+                                        five different salads, six enticing appetizers, six main entrees and five
+                                        choicest desserts. Free flowing bubbly and soft drinks. All for just ₹199 per
+                                        person </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block img-fluid" src="images/chef.jpg" alt="shivranjan">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>Shivranjan Kumar</h2>
+                                    <h4>Executive Chef</h4>
+                                    <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                        International experience having worked closely with
+                                        whos-who in the culinary world, he specializes in
+                                        creating mouthwatering Indo-Italian fusion experiences.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <ol class="carousel-indicators">
+                                <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#mycarousel" data-slide-to="1"></li>
+                                <li data-target="#mycarousel" data-slide-to="2"></li>
+                            </ol>
+                            <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" id="menu">
+                        <div class="page-section"><br>
+                            <h1 class="page-title">Our Menu</h1><br>
+                            <p>Begin with a selection from our award winning beverage menu or choose a wine from our
+                                extensive wine list. Our wine list features over 100 different vintages and has received
+                                the chamber of commerce award of excellence.</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb40">
+                        <div class="menu-block">
+                            <h3 class="menu-title">Starter</h3>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><img class="dish" src="images\aloo.jpg"
+                                                alt="Aloo and Dal Tikki"></div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\aloo.jpg">Aloo and Dal ki Tikki</a>
+                                            </h5>
+                                            <span class="dish-meta">Onion / Tomato</span>
+                                            <div class="dish-price">
+                                                <p>₹100</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><img class="dish" src="images\Cheese.jpg"
+                                                alt="Cheese Balls"></div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\Cheese.jpg">Cheese Balls</a></h5>
+                                            <span class="dish-meta">puffed corn / cheese-flavored </span>
+                                            <div class="dish-price">
+                                                <p>₹80</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><img class="dish" src="images\crispy.jpg"
+                                                alt="Veg crispy"></div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\crispy.jpg">Veg Crispy</a> </h5>
+                                            <span class="dish-meta">Ginger garlic / Black pepper</span>
+                                            <div class="dish-price">
+                                                <p>₹120</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb40">
+                        <div class="menu-block">
+                            <h3 class="menu-title">Soup</h3>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><img class="dish" src="images\minestrone.jpg"
+                                                alt="Minestrone"></div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\minestrone.jpg">Minestrone</a></h5>
+                                            <span class="dish-meta"> beans / onions celery / carrots</span>
+                                            <div class="dish-price">
+                                                <p>₹150</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><img class="dish" src="images\tomato.jpg"
+                                                alt="Tomato Soup"></div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\tomato.jpg">Tomato soup</a></h5>
+                                            <span class="dish-meta">Cheesiy / Creamy / Sweet</span>
+                                            <div class="dish-price">
+                                                <p>₹140</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><img class="dish" src="images\brocoli.jpg"
+                                                alt="Cream Of broccoli"></div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\brocoli.jpg">Cream of broccoli</a>
+                                            </h5>
+                                            <span class="dish-meta"> broccoli / milk / cream </span>
+                                            <div class="dish-price">
+                                                <p>₹90</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb40">
+                        <div class="menu-block">
+                            <h3 class="menu-title">Main Course</h3>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><img class="dish" src="images\briyani.png" alt="Biryani">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\briyani.png">Biryani</a></h5>
+                                            <span class="dish-meta"> Onion / Tomato</span>
+                                            <div class="dish-price">
+                                                <p>₹140</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><a href="#"><img class="dish" src="images\paneer.jpg"
+                                                    alt="Paneer Butter Masala"></a></div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\paneer.jpg">Paneer Butter Masala</a>
+                                            </h5>
+                                            <span class="dish-meta">Aloo Masala / Aloo Palak
+                                            </span>
+                                            <div class="dish-price">
+                                                <p>₹300</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-content">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                        <div class="dish-img"><a href="#"><img class="dish" src="images\chole.jpg"
+                                                    alt="Chole Bhature"></a></div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                        <div class="dish-content">
+                                            <h5 class="dish-title"><a href="images\chole.jpg">Chole Bhature</a> </h5>
+                                            <span class="dish-meta"> Rice Soft Idli / Ragi idli / Oats Idli </span>
+                                            <div class="dish-price">
+                                                <p>₹150</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+        <div class="page-section"><br>
+            <h1 class="page-title">Our Gallery</h1><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="images\waiter.jpg">
+                    <img src="images\waiter.jpg" class="gallery">
+                    <div class="caption">
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="images\rest1.jpg">
+                    <img src="images\rest1.jpg" class="gallery">
+                    <div class="caption">
+
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="images/restaurant.jpeg">
+                    <img src="images/restaurant.jpeg" class="gallery">
+                    <div class="caption">
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="images\rest2.jpg">
+                    <img src="images\rest2.jpg" class="gallery">
+                    <div class="caption">
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="images\rest3.jpg">
+                    <img src="images\rest3.jpg" class="gallery">
+                    <div class="caption">
+
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="thumbnail">
+                <a href="images/rest5.jpg">
+                    <img src="images/rest5.jpg" class="gallery">
+                    <div class="caption">
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div><br>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="main.html" style="color: white;">Home</a></li>
+                        <li><a href="aboutus.html" style="color: white;">About</a></li>
+                        <li><a href="#menu" style="color: white;">Menu</a></li>
+                        <li><a href="contact.html" style="color: white;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                        121, Clear Water Bay Road<br>
+                        Phagwara, Punjab<br>
+                        India<br>
+                        <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
+                        <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                        <i class="fa fa-envelope fa-lg"></i>:
+                        <a href="mailto:savioo@info.in" style="color: white;">savioo@info.in</a>
+                    </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                                class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
+                                class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                                class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p>© Copyright 2019 SAVIoO Food</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="restaurant.js"></script>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="jquery-ui.js"></script>
+</body>
+
+</html>

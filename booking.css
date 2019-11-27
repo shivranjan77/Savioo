@@ -1,0 +1,27 @@
+.brdcrm{
+    margin-top:60px;
+}
+.booking-heading{
+    margin:80px 20% 20px 0;
+    font-family: 'ubuntu condensed';
+    color: rgb(5,102,141);
+    text-shadow: 0 0 3px aqua;
+
+}
+.form-control-lg{
+    width: 80% !important;
+}
+form{
+    font-family: 'ubuntu condensed';
+    font-size: 26px;
+}
+#rooms , #mobile, #email{
+    width: 29%;
+}
+#adults, #children ,#from, #to{
+    width: 60%;
+}
+.submitbtn{
+    width: 29%;
+    height: 60px;
+}
